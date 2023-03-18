@@ -31,7 +31,7 @@ export const CarInfo = styled.View`
 
 export const CarIcon = styled(MaterialIcons)`
   color: ${({theme}) => theme.colors.headerText};
-  font-size: ${RFValue(60)}px;
+  font-size: ${RFValue(50)}px;
 
 `;
 
@@ -59,6 +59,6 @@ export const LogoutButton = styled.View``;
 
 export const LogoutIcon = styled(MaterialIcons)`
   color: ${({ theme }) => theme.colors.headerText};
-  font-size: ${RFValue(40)}px;
+  font-size: ${RFValue(30)}px;
 `;
 
