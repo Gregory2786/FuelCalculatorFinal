@@ -10,7 +10,7 @@ export function Loading() {
       alignItems: 'center'
     }}>
       <ActivityIndicator
-        color={theme.colors.highlight}
+        color={theme.colors.primary}
         size="large"
       />  
     </View>

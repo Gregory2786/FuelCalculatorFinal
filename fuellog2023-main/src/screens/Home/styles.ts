@@ -11,17 +11,18 @@ export const Container = styled.View`
 
 export const Header = styled.View`
   width: 100%;
-  height: ${RFPercentage(20)}px;
+  height: ${RFPercentage(30)}px;
   background-color: ${({theme}) =>theme.colors.primary};
   align-items: center;
-  justify-content: center;
+  margin-bottom: ${RFValue(2)}px;
 `;
 
 export const UserWrapper = styled.View`
   flex-direction: row;
-  padding: 15px;
+  padding: ${RFValue(15)}px;
   align-items: center;
   justify-content: space-between;
+  margin-top: ${RFValue(30)}px;
 `;
 
 export const CarInfo = styled.View`
@@ -62,3 +63,12 @@ export const LogoutIcon = styled(MaterialIcons)`
   font-size: ${RFValue(30)}px;
 `;
 
+export const HighlightCards = styled.ScrollView.attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: {paddingLeft: 16}
+})`
+  width: 100%;
+  position: absolute;
+  margin-top: ${RFValue(135)}
+`;

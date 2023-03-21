@@ -1,10 +1,12 @@
 export default {
   colors:{
       primary: '#FAA849',
-      secondary:'',
-      background: '#F9E3E3',
+      secondary:'#F9E3E3',
+      background: '#FFFFFF',
       headerText: '#000000',
-      saveBotton: '#D9D9D9'
+      saveBotton: '#D9D9D9',
+      lightText: '#C0C0C0',
+      GeneralCard: '#800000'
   
   },
   fonts:{
