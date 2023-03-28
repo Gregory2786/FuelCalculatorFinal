@@ -73,9 +73,9 @@ export const HighlightCards = styled.ScrollView.attrs({
 })``;
 
 export const VehicleWrapper = styled.View`
- padding: ${RFValue(3)}px;
- margin-left: ${RFValue(5)}px;
+ padding: ${RFValue(5)}px;
  flex-direction: row;
+  margin-left: ${RFValue(5)}px;
 `;
 
 export const Vehicle = styled.Text`
@@ -95,6 +95,7 @@ export const Title = styled.Text`
   font-family: ${({theme})=> theme.fonts.iBold};
   font-size: ${RFValue(14)}px;
   padding: ${RFValue(5)}px;
-  margin-left: ${RFValue(5)}px;;
+  margin-left: ${RFValue(5)}px;
+  margin-top: ${RFValue(5)}px;
 
 `;

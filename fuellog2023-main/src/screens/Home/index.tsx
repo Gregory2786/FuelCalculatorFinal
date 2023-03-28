@@ -1,4 +1,6 @@
 import { HighlightCard } from '../../components/HighlightCard';
+import { TransactionCard } from '../../components/TransactionCard';
+
 
 import { 
   Container,
@@ -79,7 +81,8 @@ export function Home() {
       <Transactions>
         <Title>Abastecimentos realizados</Title>
       </Transactions>
-     
+      
+        <TransactionCard></TransactionCard>
       
     </Container>
   );
