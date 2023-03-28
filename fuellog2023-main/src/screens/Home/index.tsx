@@ -1,4 +1,5 @@
 import { HighlightCard } from '../../components/HighlightCard';
+import { TransactionCard } from '../../components/TransactionCard'
 import { 
   Container,
   Header,
@@ -10,7 +11,12 @@ import {
   CarPlate,
   LogoutButton,
   LogoutIcon,
-  HighlightCards
+  HighlightCards,
+  VehicleWrapper,
+  Vehicle,
+  VehicleModel,
+  Transactions,
+  Title
 } from './styles';
 
 export function Home() {
@@ -37,6 +43,16 @@ export function Home() {
           </LogoutButton>
         </UserWrapper>
       </Header>
+      <VehicleWrapper>
+        <Vehicle>
+          Veiculo: 
+          </Vehicle>
+        <VehicleModel>
+          Marea Turbo
+          </VehicleModel>
+      </VehicleWrapper>
+     
+     
       <HighlightCards>
         <HighlightCard
           title='Álcool'
@@ -58,6 +74,13 @@ export function Home() {
           lastUpdate='Última atualização 12/02/2023'
           type='total'/>
       </HighlightCards>
+      
+      
+      <Transactions>
+        <Title>Abastecimentos realizados</Title>
+      </Transactions>
+     
+      <TransactionCard></TransactionCard>
     </Container>
   );
 }

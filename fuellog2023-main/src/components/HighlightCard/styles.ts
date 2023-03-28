@@ -7,11 +7,11 @@ interface TypeProps{
 export const Container  =  styled.View<TypeProps>`
     background-color: ${({theme, type}) => type === 'total' ?
     theme.colors.GeneralCard : theme.colors.secondary};
-    width: ${RFValue(330)}px;
+    width: ${RFValue(200)}px;
     height: ${RFValue(140)}px;
     border-radius: ${RFValue(15)}px;
     padding: ${RFValue(14)}px ${RFValue(15)}px;
-    margin-right: ${RFValue(15)}px;
+    margin-right: ${RFValue(10)}px;
 `;
 
 export const Header  = styled.View`
