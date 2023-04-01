@@ -1,5 +1,6 @@
+import { FlatList } from 'react-native';
 import { HighlightCard } from '../../components/HighlightCard';
-import { TransactionCard } from '../../components/TransactionCard';
+import { TransactionCard, TransactionCardProps } from '../../components/TransactionCard';
 
 
 import { 
@@ -18,10 +19,44 @@ import {
   Vehicle,
   VehicleModel,
   Transactions,
-  Title
+  Title,
+  TransactionList
 } from './styles';
 
+export interface DataListProps extends TransactionCardProps{
+  id : string;
+  
+
+}
+
 export function Home() {
+  const transactionData: DataListProps[] = [
+    { 
+      id: '1',
+      type : 'alcohol' ,
+      fuelPrice : 'R$ 4,50',
+      amountFuel : '20 litros',
+      totalValue : 'R$ 90,00',
+      date :'25/02/2023'
+
+    },
+    {
+      id: '2',
+      type : 'gasoline' ,
+      fuelPrice : 'R$ 5,60',
+      amountFuel : '25 litros',
+      totalValue : 'R$ 140,00',
+      date :'01/02/2023'
+    },
+    {
+      id: '3',
+      type : 'gasoline' ,
+      fuelPrice : 'R$ 5,45',
+      amountFuel : '20 litros',
+      totalValue : 'R$ 109,00',
+      date :'10/01/2023'
+      },
+    ];
   return (
     <Container>
       <Header>
@@ -80,10 +115,15 @@ export function Home() {
       
       <Transactions>
         <Title>Abastecimentos realizados</Title>
+      
+      
+        <TransactionList
+          data={transactionData}
+          keyExtractor={(item)=>item.id}
+          renderItem={({item}) => <TransactionCard data= {item}/>}
+        />
       </Transactions>
-      
-        <TransactionCard></TransactionCard>
-      
+        
     </Container>
   );
 }

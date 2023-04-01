@@ -18,7 +18,18 @@ import {
     Footer
      } from "./styles";
 
-export function TransactionCard(){
+export interface TransactionCardProps{
+    type : 'alcohol' | 'gasoline';
+    fuelPrice : string;
+    amountFuel : string;
+    totalValue : string;
+    date : string;
+}
+
+interface Props{
+    data : TransactionCardProps
+}
+export function TransactionCard({data}: Props){
     return(
         <Container>
 
@@ -29,7 +40,7 @@ export function TransactionCard(){
                         </FuelTypeLabel>
 
                         <Fuel>
-                            Gasolina
+                            {data.type === 'alcohol'? 'Álcool' : 'Gasolina'}
                         </Fuel>
                     </FuelType>
                 </Header>
@@ -38,7 +49,7 @@ export function TransactionCard(){
                         Quantidade:
                     </AmountFuelLabel>
                     <Amount>
-                        20 litros
+                        {data.amountFuel}
                     </Amount>    
                 </AmountFuel>
                 <FuelPrice>
@@ -46,7 +57,7 @@ export function TransactionCard(){
                         Preço por litro:
                     </FuelPriceLabel>
                     <Price>
-                        R$ 5.50
+                        {data.fuelPrice}
                     </Price>
                 </FuelPrice>
                 <Footer>
@@ -55,10 +66,10 @@ export function TransactionCard(){
                             Valor total:
                         </TotalValueLabel>
                         <Value>
-                            R$ 110,00
+                            {data.totalValue}
                         </Value>
                     </TotalValue>
-                    <Date>25/01/2023</Date>
+                    <Date>{data.date}</Date>
                 </Footer>
 
         </Container>
